@@ -1,0 +1,3 @@
+variable "SubnetsAylin" {}
+
+variable "VPCaylin" {}
