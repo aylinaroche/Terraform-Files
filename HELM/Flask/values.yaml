@@ -1,0 +1,10 @@
+
+deployment:
+  image: aylinaroche/myflask
+  port: 5000
+  replicas: 1
+  component: web
+
+service:
+  port: 80
+  targetPort: 5000

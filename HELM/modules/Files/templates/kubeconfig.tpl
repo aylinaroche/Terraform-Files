@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Config
+preferences: {}
+
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1URXdPREU0TXpNd09Wb1hEVEk1TVRFd05URTRNek13T1Zvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTUM0CnREa1o5M3lWQ2dGTU5HUXBRMm5jTm1DQ1htTlFZd2p5S2h0a2hlcVRHMDdkWTR2T0h0ZExLZkdiaDM1SDZia2UKUjRBTWUrY1J6cDZ2OEdYVEpGNzVPZVp2UWpZdFZLa3UxbHlrajEybmMvZzU2SnlBa0t4WGsvbGJyZkROL29DbApCdExwRU9obkZ6YWFWcXFMVWtZa3VjNWdES1VqOGFQOCs3K2p0VEZ1RWxsVnE2bzVvZGNPb0hncm9iMW9TS081CmkxMzhTTUhqdjJWdGo5ZlQ5STErcXUzTWp5N1diU2Z5M2VoM01CeVVNclZMQkpTMkhmRDd5dEQ0aWlIYnNUNVAKVUM5V3FDeDFsUHVQQkRjWTRWOTljSUR1NHRQbE5jeXlpTjdvVE1ZTmNFaTE1L0k4eFRXK3JqUFpyMFJFT0RxKwpJVVFyV09OVzF3UFdGcitXV3ZFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFLMlhHNDZmWCtpTGtJbDB1QTVBSTFQM09DdWYKS081c04ybVloZlBwekNQWHF6TUdKMExEVnFRM3dUZE1BREVXRkIxV2hpTlRFUklCVytLWit5TXAweERtb09hNAphaHp4by8yYk4xakVva05uZkxjWXBCaUphN28zVElwcGxoODBvSHk1Zm11M1Y1Yy9qZU8yQ1FBNzRaaUJKQ2g2CjhLY1pSSUhFaEsyS0dKZitVN2pqeHFaQWhTaExaZFpDUmU5YXA2aEFyQWRkVGJ1YU40eVFJUU1IdVQ5VEN6dlYKS2ZJakJkYlpUWGdBU2MyQmVNTlhQMUc2OWFXNFM3dUpzZVhjQnl1a0NhNSt1bU1XOUZKY21QbE5sK3ZVeUtJcwpDNTVmU0dZU0YvRW9xazhmN0xBa0NJSG5PMm5YdjFiVkNoVGF5SWRldjlDVzdzZk9mZWMzeW9mLytUcz0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    server: https://A579A06A414A3E212CAC1FF2BB5CC9E3.sk1.us-west-2.eks.amazonaws.com
+  name: arn:aws:eks:us-west-2:492266378106:cluster/ClusterAylin
+contexts:
+- context:
+    cluster: arn:aws:eks:us-west-2:492266378106:cluster/ClusterAylin
+    user: arn:aws:eks:us-west-2:492266378106:cluster/ClusterAylin
+  name: arn:aws:eks:us-west-2:492266378106:cluster/ClusterAylin
+current-context: arn:aws:eks:us-west-2:492266378106:cluster/ClusterAylin
+
+users:
+- name: arn:aws:eks:us-west-2:492266378106:cluster/ClusterAylin
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1alpha1
+      args:
+      - --region
+      - us-west-2
+      - eks
+      - get-token
+      - --cluster-name
+      - ClusterAylin
+      command: aws
+      env: null

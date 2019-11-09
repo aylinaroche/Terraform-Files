@@ -1,8 +1,8 @@
 resource "aws_vpc" "VPCaylin" {
-  cidr_block           = "192.169.0.0/16"
-  instance_tenancy     = "default"
-  enable_dns_support   = "true"
-  enable_dns_hostnames = "true"
+  cidr_block                       = "192.169.0.0/16"
+  instance_tenancy                 = "default"
+  enable_dns_support               = "true"
+  enable_dns_hostnames             = "true"
   tags = {
     Name = "VPCaylin"
   }
